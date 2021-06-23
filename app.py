@@ -34,7 +34,7 @@ if st.button('Узнать как работает модель'):
     cm = np.corrcoef(test[cols].values.T)
     f, ax = plt.subplots(figsize=(12,10))
     sns.heatmap(cm, ax=ax, cmap="YlGnBu", linewidths=0.1, yticklabels=cols.values, xticklabels = cols.values, annot=True, fmt=".2f")
-    st.pyplot()
+    st.pyplot(f)
 
     test_data = test
     X = test_data.drop(['workload', 'id'], axis = 1)
